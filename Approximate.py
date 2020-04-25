@@ -1,0 +1,1 @@
+print(str(int(float(input())+0.5)))

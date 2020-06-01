@@ -10,7 +10,7 @@
 
 while 1:
     try:
-        str3, str4 = input(), input()
+        str3, str4 = input().split()
         maxlen, len3, len4 = 0, len(str3), len(str4)
         if len3<=len4:
             str1, str2 = str3, str4
@@ -21,7 +21,7 @@ while 1:
         out = ''
         for i in range(len1):
             for j in range(i,len1,1):
-                substring = str1[i:j]
+                substring = str1[i:j+1]
                 len5 = len(substring)
                 if len5<=maxlen:
                     continue
@@ -31,6 +31,6 @@ while 1:
                         out    = substring
                     else:
                         break
-        print(out)
+        print(len(out))
     except:
         break
